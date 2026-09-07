@@ -16,3 +16,7 @@ A market-ready, voice-first cognitive companion appliance designed for senior ci
 | **Level 4.2** | src/memory/graph_store.py | Maintains relational knowledge graph triplets (subject-predicate-object) for deterministic entity tracking. |
 | **Level 4.3** | src/memory/episodic.py | Logs multi-turn conversation logs and emotional trajectories for chronological working memory retrieval. |
 | **Level 4.4** | src/memory/extractor.py & src/brain/prompt_builder.py | Extracts identity markers and relations in real-time; dynamically injects multi-tier memory blocks into state prompts. |
+| **Level 5.1** | src/routines/scheduler.py | Runs persistent APScheduler engine with SQLite JobStore for hardware-reliable clock triggers. |
+| **Level 5.2** | src/routines/medications.py | Tier-2 critical medication tracking loop with verbal confirmation states and regimen tables. |
+| **Level 5.3** | src/routines/wellness.py | Real-time inactivity monitor tracking elapsed interaction intervals to fire Tier-1 and Tier-3 prompts. |
+| **Level 5.4** | src/routines/escalation.py | Tier-4 emergency dispatcher triggering automated alerts and caregiver payloads upon unacknowledged anomalies. |
