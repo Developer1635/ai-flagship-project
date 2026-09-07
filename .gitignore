@@ -1,4 +1,11 @@
 .venv/
+*.gguf
+models/
+data/*.db
+data/*.sqlite
+*.mp3
+*.wav
+*.log
+conversation_history.json
 __pycache__/
-*.pyc
 .env
