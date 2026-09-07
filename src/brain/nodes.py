@@ -1,6 +1,7 @@
 import re
 from typing import Dict, Any
 from src.brain.state import CognitiveState
+from src.brain.llm import generate_local_response
 
 def classify_input_node(state: CognitiveState) -> Dict[str, Any]:
     text = state['user_input'].lower()
@@ -39,11 +40,8 @@ def response_synthesizer_node(state: CognitiveState) -> Dict[str, Any]:
     context = state.get('grounded_context', '')
     user_msg = state['user_input']
     
-    if context:
-        final_text = f'{context.strip()} You mentioned: "{user_msg}". I am actively processing this with you.'
-    else:
-        final_text = f'Understood. I am attentive and noting every detail regarding "{user_msg}".'
-        
+    final_text = generate_local_response(user_input=user_msg, contextual_prefix=context)
+    
     return {
         'final_response': final_text,
         'messages': [{'role': 'assistant', 'content': final_text}]
