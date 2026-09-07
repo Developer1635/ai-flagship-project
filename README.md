@@ -20,3 +20,7 @@ A market-ready, voice-first cognitive companion appliance designed for senior ci
 | **Level 5.2** | src/routines/medications.py | Tier-2 critical medication tracking loop with verbal confirmation states and regimen tables. |
 | **Level 5.3** | src/routines/wellness.py | Real-time inactivity monitor tracking elapsed interaction intervals to fire Tier-1 and Tier-3 prompts. |
 | **Level 5.4** | src/routines/escalation.py | Tier-4 emergency dispatcher triggering automated alerts and caregiver payloads upon unacknowledged anomalies. |
+| **Level 6.1** | src/audio/vad.py | WebRTC VAD frame parser evaluating 30ms audio slices with barge-in interrupt hooks. |
+| **Level 6.2** | src/audio/stt.py | Quantized Faster-Whisper local streaming transcriber with VAD silence filtering. |
+| **Level 6.3** | src/audio/tts.py | Low-latency speech synthesizer enforcing 155 WPM unhurried pacing and instant stop handlers. |
+| **Level 6.4** | src/audio/capture.py | 16kHz microphone stream capturing speech buffers and detecting utterance endpoints. |
